@@ -2,6 +2,7 @@
 import React from 'react';
 import { Check, BookOpen, Users, GraduationCap, School, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button } from './ui/button';
 
 const FeatureCheck = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -24,13 +25,16 @@ const Method = () => {
           <div className="relative order-2 lg:order-1">
             <div className="absolute -z-10 h-96 w-96 rounded-full bg-brand-light/70 blur-3xl left-1/4 top-1/4"></div>
             <div className="relative glass-panel p-6 md:p-8 rounded-lg overflow-hidden shadow-xl animate-scale-in">
-              <img 
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaD0AqDancEmcrGMvMdGuigrIYaKvz2wSbMQ&s"
-                alt="Sala de aula com metodologia The Place"
-                className="w-full h-auto rounded-lg object-cover lazy-image lazy-image-loaded"
-                style={{ aspectRatio: '4/3' }}
-                loading="lazy"
-              />
+              <div className="responsive-video-container w-full rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                <iframe 
+                  src="https://www.youtube.com/embed/3rmkb7_IBlU" 
+                  title="Metodologia The Place English School"
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
               <div className="absolute bottom-8 right-8 glass-panel p-4 rounded-lg shadow-lg max-w-xs animate-fade-in-up">
                 <div className="flex gap-3 mb-2">
                   <BookOpen className="h-6 w-6 text-brand-blue" />

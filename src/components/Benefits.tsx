@@ -31,7 +31,7 @@ const BenefitCard = ({
 
 const Benefits = () => {
   return (
-    <section id="beneficios" className="py-20 bg-gradient-to-b from-white to-slate-50">
+    <section id="beneficios" className="pt-8 pb-20 bg-gradient-to-b from-white to-slate-50">
       <div className="container px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block rounded-md bg-brand-light px-3 py-1 text-sm font-medium text-brand-blue mb-4">

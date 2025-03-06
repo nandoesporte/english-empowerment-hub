@@ -24,8 +24,12 @@ const Navbar = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-brand-navy">
-              The Place <span className="text-brand-blue">English School</span>
+            <a href="/" className="the-place-logo flex items-center">
+              <img 
+                src="https://theplacebrazil.com/wp-content/uploads/2016/12/LOGO-JPG-200px.jpg" 
+                alt="The Place English School" 
+                className="h-12 w-auto"
+              />
             </a>
           </div>
 

@@ -47,10 +47,10 @@ const Hero = () => {
           <div className="relative rounded-lg overflow-hidden animate-scale-in">
             <div className="relative z-10 glass-panel p-6 md:p-10 mx-auto max-w-md lg:max-w-full">
               <img 
-                src="/teacher.jpg" 
-                alt="Professor de inglês ensinando" 
+                src="/lovable-uploads/3d293fca-69e3-4c14-928a-011b41bb612b.png" 
+                alt="The Place English School - Metodologia com professora segurando livros" 
                 className="w-full h-auto rounded-lg shadow-lg object-cover lazy-image lazy-image-loaded"
-                style={{ aspectRatio: '16/9' }}
+                style={{ aspectRatio: '1/1' }}
                 loading="lazy"
               />
               <div className="absolute -bottom-6 -right-6 flex items-center justify-center rounded-full bg-white w-24 h-24 shadow-lg animate-pulse-slow p-2">

@@ -35,12 +35,24 @@ const Method = () => {
                   loading="lazy"
                 ></iframe>
               </div>
-              <div className="absolute bottom-8 right-8 glass-panel p-4 rounded-lg shadow-lg max-w-xs animate-fade-in-up">
-                <div className="flex gap-3 mb-2">
-                  <BookOpen className="h-6 w-6 text-brand-blue" />
-                  <h4 className="font-semibold text-brand-navy">Método Exclusivo</h4>
+              {/* Methodology note repositioned for better mobile visibility */}
+              <div className="absolute bottom-8 right-8 md:right-8 glass-panel p-3 md:p-4 rounded-lg shadow-lg max-w-[200px] md:max-w-xs animate-fade-in-up hidden md:block">
+                <div className="flex gap-2 md:gap-3 mb-1 md:mb-2">
+                  <BookOpen className="h-5 w-5 md:h-6 md:w-6 text-brand-blue" />
+                  <h4 className="font-semibold text-brand-navy text-sm md:text-base">Método Exclusivo</h4>
                 </div>
-                <p className="text-sm text-slate-700">
+                <p className="text-xs md:text-sm text-slate-700">
+                  Nossa metodologia combina técnicas modernas com práticas comprovadamente eficazes.
+                </p>
+              </div>
+              
+              {/* Alternative methodology note for mobile devices */}
+              <div className="mt-4 glass-panel p-3 rounded-lg shadow-lg md:hidden">
+                <div className="flex gap-2 mb-1">
+                  <BookOpen className="h-5 w-5 text-brand-blue" />
+                  <h4 className="font-semibold text-brand-navy text-sm">Método Exclusivo</h4>
+                </div>
+                <p className="text-xs text-slate-700">
                   Nossa metodologia combina técnicas modernas com práticas comprovadamente eficazes.
                 </p>
               </div>

@@ -53,8 +53,12 @@ const Hero = () => {
                 style={{ aspectRatio: '16/9' }}
                 loading="lazy"
               />
-              <div className="absolute -bottom-6 -right-6 flex items-center justify-center rounded-full bg-brand-yellow w-24 h-24 shadow-lg animate-pulse-slow">
-                <span className="text-brand-navy font-bold text-lg">Método<br/>Único</span>
+              <div className="absolute -bottom-6 -right-6 flex items-center justify-center rounded-full bg-white w-24 h-24 shadow-lg animate-pulse-slow p-2">
+                <img 
+                  src="https://theplacebrazil.com/wp-content/uploads/2016/12/LOGO-JPG-200px.jpg" 
+                  alt="The Place Logo" 
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </div>
           </div>

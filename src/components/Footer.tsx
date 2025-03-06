@@ -48,7 +48,7 @@ const Footer = () => {
             <h4 className="font-semibold text-brand-navy mb-4">Contato</h4>
             <address className="not-italic text-slate-600 space-y-2">
               <p>contato@theplaceenglish.com.br</p>
-              <p>+55 (XX) XXXX-XXXX</p>
+              <p>(44) 99842-5613</p>
             </address>
             <div className="mt-4 flex space-x-4">
               <a 

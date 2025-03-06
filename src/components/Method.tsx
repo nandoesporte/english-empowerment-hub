@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, BookOpen, Users, GraduationCap, School, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -70,7 +69,7 @@ const Method = () => {
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-medium">Sem Investimento Inicial em Livros:</span> Material didático sob demanda, sem necessidade de estoque.
+                <span className="font-medium">Investimento Sob Demanda:</span> Material didático sob demanda, sem necessidade de estoque.
               </FeatureCheck>
             </div>
             

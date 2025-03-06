@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Check, BookOpen, Users, GraduationCap, School, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -24,7 +25,7 @@ const Method = () => {
             <div className="absolute -z-10 h-96 w-96 rounded-full bg-brand-light/70 blur-3xl left-1/4 top-1/4"></div>
             <div className="relative glass-panel p-6 md:p-8 rounded-lg overflow-hidden shadow-xl animate-scale-in">
               <img 
-                src="/classroom.jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaD0AqDancEmcrGMvMdGuigrIYaKvz2wSbMQ&s"
                 alt="Sala de aula com metodologia The Place"
                 className="w-full h-auto rounded-lg object-cover lazy-image lazy-image-loaded"
                 style={{ aspectRatio: '4/3' }}

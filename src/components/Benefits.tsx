@@ -24,6 +24,7 @@ const BenefitCard = ({
       </div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-slate-600">{description}</p>
+      <div className="absolute -bottom-1 -right-1 w-16 h-16 bg-brand-yellow/10 rounded-full"></div>
     </div>
   );
 };
@@ -33,7 +34,7 @@ const Benefits = () => {
     <section id="beneficios" className="py-20 bg-gradient-to-b from-white to-slate-50">
       <div className="container px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block rounded-full bg-brand-light px-3 py-1 text-sm font-medium text-brand-blue mb-4">
+          <div className="inline-block rounded-md bg-brand-light px-3 py-1 text-sm font-medium text-brand-blue mb-4">
             Quem Pode se Beneficiar
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
@@ -44,7 +45,7 @@ const Benefits = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 perspective">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <BenefitCard
             icon={Users}
             title="Professores de Inglês"

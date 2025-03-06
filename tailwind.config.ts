@@ -64,10 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				brand: {
-					blue: '#0077B6',
-					navy: '#023E8A',
-					teal: '#0096C7',
-					light: '#CAF0F8'
+					blue: '#003B84',
+					navy: '#002A5F',
+					teal: '#007DA3',
+					light: '#E6F1F8',
+					yellow: '#FFD600',
+					red: '#C80000'
 				}
 			},
 			borderRadius: {
@@ -125,6 +127,16 @@ export default {
 						opacity: '1',
 						transform: 'translateX(0)'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.8',
+						transform: 'scale(1.05)'
+					}
 				}
 			},
 			animation: {
@@ -134,12 +146,17 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out',
 				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
 				'scale-in': 'scale-in 0.4s ease-out',
-				'slide-in': 'slide-in 0.5s ease-out'
+				'slide-in': 'slide-in 0.5s ease-out',
+				'pulse-slow': 'pulse-slow 3s infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'hero-pattern': 'linear-gradient(to right, rgba(0, 120, 182, 0.9), rgba(2, 62, 138, 0.8))',
-				'feature-gradient': 'linear-gradient(135deg, #0077B6 0%, #023E8A 100%)'
+				'hero-pattern': 'linear-gradient(to right, rgba(0, 59, 132, 0.9), rgba(0, 42, 95, 0.8))',
+				'feature-gradient': 'linear-gradient(135deg, #003B84 0%, #002A5F 100%)'
+			},
+			fontFamily: {
+				sans: ['Montserrat', 'sans-serif'],
+				display: ['Poppins', 'sans-serif']
 			}
 		}
 	},

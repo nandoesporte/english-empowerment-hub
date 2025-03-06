@@ -5,14 +5,14 @@ import { cn } from '@/lib/utils';
 
 const BilingualSchool = () => {
   return (
-    <section id="escola-bilingue" className="py-20 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+    <section id="escola-bilingue" className="py-20 bg-white relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 -z-10 h-64 w-64 rounded-full bg-brand-light opacity-70 blur-2xl"></div>
       <div className="absolute bottom-0 left-0 -z-10 h-64 w-64 rounded-full bg-brand-light opacity-70 blur-2xl"></div>
       
       <div className="container px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block rounded-full bg-brand-light px-3 py-1 text-sm font-medium text-brand-blue mb-4">
+          <div className="inline-block rounded-md bg-brand-yellow px-3 py-1 text-sm font-medium text-brand-navy mb-4">
             Transformação Educacional
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
@@ -24,7 +24,7 @@ const BilingualSchool = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="cta-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+          <div className="the-place-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             <div className="flex items-center justify-center h-14 w-14 rounded-full bg-brand-light mb-6">
               <School className="h-7 w-7 text-brand-blue" />
             </div>
@@ -50,7 +50,7 @@ const BilingualSchool = () => {
             </div>
           </div>
           
-          <div className="cta-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+          <div className="the-place-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
             <div className="flex items-center justify-center h-14 w-14 rounded-full bg-brand-light mb-6">
               <BookOpen className="h-7 w-7 text-brand-blue" />
             </div>
@@ -76,7 +76,7 @@ const BilingualSchool = () => {
             </div>
           </div>
           
-          <div className="cta-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <div className="the-place-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
             <div className="flex items-center justify-center h-14 w-14 rounded-full bg-brand-light mb-6">
               <GraduationCap className="h-7 w-7 text-brand-blue" />
             </div>

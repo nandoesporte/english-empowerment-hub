@@ -11,7 +11,7 @@ const CTA = () => {
       <div className="absolute inset-0 -z-10 bg-[url('/pattern.png')] bg-repeat opacity-[0.02]"></div>
       
       <div className="container px-4 md:px-6 max-w-5xl">
-        <div className="glass-panel bg-gradient-to-r from-brand-blue to-brand-navy p-8 md:p-12 rounded-3xl overflow-hidden relative">
+        <div className="glass-panel bg-gradient-to-r from-brand-blue to-brand-navy p-8 md:p-12 rounded-lg overflow-hidden relative">
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
@@ -31,23 +31,23 @@ const CTA = () => {
                 <input 
                   type="text" 
                   placeholder="Nome completo" 
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+                  className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
                   required
                 />
                 <input 
                   type="email" 
                   placeholder="Seu melhor e-mail" 
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+                  className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
                   required
                 />
                 <input 
                   type="tel" 
                   placeholder="Telefone com WhatsApp" 
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+                  className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
                   required
                 />
                 <select 
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/30"
+                  className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/30"
                   required
                 >
                   <option value="" className="bg-brand-navy">Selecione seu perfil</option>
@@ -61,9 +61,9 @@ const CTA = () => {
                 <button 
                   type="submit" 
                   className={cn(
-                    "w-full py-3 px-6 bg-white text-brand-navy font-semibold rounded-lg",
+                    "w-full py-3 px-6 bg-brand-yellow text-brand-navy font-semibold rounded-md",
                     "flex items-center justify-center gap-2 transition-all duration-300",
-                    "hover:bg-brand-light hover:shadow-lg active:scale-[0.98]"
+                    "hover:bg-white hover:shadow-lg active:scale-[0.98]"
                   )}
                 >
                   Quero mais informações

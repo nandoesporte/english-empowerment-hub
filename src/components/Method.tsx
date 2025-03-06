@@ -18,20 +18,20 @@ const FeatureCheck = ({ children }: { children: React.ReactNode }) => {
 
 const Method = () => {
   return (
-    <section id="metodo" className="py-20 overflow-hidden">
+    <section id="metodo" className="py-20 overflow-hidden bg-slate-50">
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative order-2 lg:order-1">
             <div className="absolute -z-10 h-96 w-96 rounded-full bg-brand-light/70 blur-3xl left-1/4 top-1/4"></div>
-            <div className="relative glass-panel p-6 md:p-8 rounded-2xl overflow-hidden shadow-xl animate-scale-in">
+            <div className="relative glass-panel p-6 md:p-8 rounded-lg overflow-hidden shadow-xl animate-scale-in">
               <img 
                 src="/classroom.jpg"
                 alt="Sala de aula com metodologia The Place"
-                className="w-full h-auto rounded-xl object-cover lazy-image lazy-image-loaded"
+                className="w-full h-auto rounded-lg object-cover lazy-image lazy-image-loaded"
                 style={{ aspectRatio: '4/3' }}
                 loading="lazy"
               />
-              <div className="absolute bottom-8 right-8 glass-panel p-4 rounded-xl shadow-lg max-w-xs animate-fade-in-up">
+              <div className="absolute bottom-8 right-8 glass-panel p-4 rounded-lg shadow-lg max-w-xs animate-fade-in-up">
                 <div className="flex gap-3 mb-2">
                   <BookOpen className="h-6 w-6 text-brand-blue" />
                   <h4 className="font-semibold text-brand-navy">Método Exclusivo</h4>
@@ -44,7 +44,7 @@ const Method = () => {
           </div>
           
           <div className="space-y-8 order-1 lg:order-2">
-            <div className="inline-block rounded-full bg-brand-light px-3 py-1 text-sm font-medium text-brand-blue">
+            <div className="inline-block rounded-md bg-brand-yellow px-3 py-1 text-sm font-medium text-brand-navy">
               Por Que Escolher a The Place
             </div>
             
@@ -75,7 +75,7 @@ const Method = () => {
             </div>
             
             <a href="#contato" className={cn(
-              "hero-button hero-button-primary",
+              "the-place-button",
               "inline-flex mt-4 animate-scale-in"
             )}>
               Quero Saber Mais

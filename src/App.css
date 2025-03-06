@@ -30,3 +30,53 @@ html {
     scroll-behavior: auto;
   }
 }
+
+/* The Place custom styles */
+.the-place-gradient {
+  background: linear-gradient(135deg, #003B84 0%, #002A5F 100%);
+}
+
+.the-place-accent {
+  color: #FFD600;
+}
+
+.the-place-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 59, 132, 0.1), 0 8px 10px -6px rgba(0, 42, 95, 0.1);
+}
+
+.the-place-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.the-place-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 59, 132, 0.1), 0 10px 10px -5px rgba(0, 42, 95, 0.04);
+}
+
+/* Custom button with yellow hover effect */
+.the-place-hover-button {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.the-place-hover-button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #FFD600;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.the-place-hover-button:hover:after {
+  height: 100%;
+}
+
+.the-place-hover-button:hover {
+  color: #003B84;
+}

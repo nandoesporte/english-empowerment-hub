@@ -12,14 +12,18 @@ const FeatureCheck = ({ children }: { children: React.ReactNode }) => {
           <Check className="h-3.5 w-3.5 text-brand-blue" />
         </div>
       </div>
-      <p className="text-slate-700">{children}</p>
+      <p className="text-slate-700 text-base">{children}</p>
     </div>
   );
 };
 
 const Method = () => {
   return (
-    <section id="metodo" className="py-20 overflow-hidden bg-slate-50">
+    <section id="metodo" className="py-20 overflow-hidden bg-slate-50 relative">
+      {/* Background decorations */}
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-yellow/5 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-brand-blue/5 rounded-full blur-3xl"></div>
+      
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative order-2 lg:order-1">
@@ -35,6 +39,7 @@ const Method = () => {
                   loading="lazy"
                 ></iframe>
               </div>
+              
               {/* Methodology note repositioned for better mobile visibility */}
               <div className="absolute bottom-8 right-8 md:right-8 glass-panel p-3 md:p-4 rounded-lg shadow-lg max-w-[200px] md:max-w-xs animate-fade-in-up hidden md:block border border-white/50">
                 <div className="flex gap-2 md:gap-3 mb-1 md:mb-2">
@@ -60,41 +65,41 @@ const Method = () => {
           </div>
           
           <div className="space-y-8 order-1 lg:order-2">
-            <div className="inline-block rounded-md bg-brand-yellow px-3 py-1 text-sm font-medium text-brand-navy">
+            <div className="inline-block rounded-full bg-brand-yellow px-4 py-1.5 text-sm font-semibold text-brand-navy shadow-sm">
               Por Que Escolher a The Place
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy">
-              Por Que Escolher a The Place English School?
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy leading-tight">
+              Por Que Escolher a <span className="text-gradient-blue">The Place English School?</span>
             </h2>
             
-            <div className="space-y-4 mt-8">
+            <div className="space-y-5 mt-8">
               <FeatureCheck>
-                <span className="font-medium">Metodologia PPP:</span> Preço acessível, Perto de você, Processo natural de aprendizagem.
+                <span className="font-semibold">Metodologia PPP:</span> Preço acessível, Perto de você, Processo natural de aprendizagem.
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-medium">Licença Exclusiva:</span> Opere com exclusividade em sua região, utilizando nossa marca e metodologia.
+                <span className="font-semibold">Licença Exclusiva:</span> Opere com exclusividade em sua região, utilizando nossa marca e metodologia.
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-medium">Material Didático Completo:</span> Séries Kids, Teens, Adultos e Premium para todas as idades e níveis.
+                <span className="font-semibold">Material Didático Completo:</span> Séries Kids, Teens, Adultos e Premium para todas as idades e níveis.
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-medium">Sem Royalties:</span> Apenas uma taxa única de licença de R$10.000,00, sem mensalidades ou porcentagens.
+                <span className="font-semibold">Sem Royalties:</span> Apenas uma taxa única de licença de R$10.000,00, sem mensalidades ou porcentagens.
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-medium">Suporte Completo:</span> Treinamento para professores, suporte pedagógico e orientação para gestão da escola.
+                <span className="font-semibold">Suporte Completo:</span> Treinamento para professores, suporte pedagógico e orientação para gestão da escola.
               </FeatureCheck>
             </div>
             
             <a href="#contato" className={cn(
               "the-place-button",
-              "inline-flex mt-4 animate-scale-in shadow-blue"
+              "inline-flex mt-4 animate-scale-in shadow-blue rounded-full"
             )}>
-              Quero Saber Mais
+              Quero Abrir Minha Escola
             </a>
           </div>
         </div>

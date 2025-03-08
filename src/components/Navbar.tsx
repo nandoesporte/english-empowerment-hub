@@ -34,22 +34,22 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            <a href="#beneficios" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300 relative group">
+          <div className="hidden md:flex items-center space-x-2">
+            <a href="#beneficios" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300 relative group font-medium">
               Benefícios
               <span className="absolute inset-x-0 bottom-0 h-0.5 bg-brand-blue transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
             </a>
-            <a href="#metodo" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300 relative group">
+            <a href="#metodo" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300 relative group font-medium">
               Nosso Método
               <span className="absolute inset-x-0 bottom-0 h-0.5 bg-brand-blue transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
             </a>
-            <a href="#escola-bilingue" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300 relative group">
-              Escola Bilíngue
+            <a href="#escola-bilingue" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300 relative group font-medium">
+              Material Didático
               <span className="absolute inset-x-0 bottom-0 h-0.5 bg-brand-blue transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
             </a>
             <a 
               href="#contato" 
-              className="ml-4 inline-flex items-center justify-center rounded-full bg-brand-blue py-2 px-6 text-sm font-medium text-white transition-colors hover:bg-brand-navy shadow-blue"
+              className="ml-4 inline-flex items-center justify-center rounded-full bg-brand-blue py-2.5 px-6 text-sm font-medium text-white transition-colors hover:bg-brand-navy shadow-blue"
             >
               Quero Saber Mais <ChevronRight className="ml-1 h-4 w-4" />
             </a>
@@ -85,26 +85,29 @@ const Navbar = () => {
               <a 
                 href="#beneficios" 
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-3 text-lg text-slate-700 hover:text-brand-blue border-b border-slate-100"
+                className="px-4 py-3 text-lg text-slate-700 hover:text-brand-blue border-b border-slate-100 font-medium"
               >
                 Benefícios
               </a>
               <a 
                 href="#metodo" 
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-3 text-lg text-slate-700 hover:text-brand-blue border-b border-slate-100"
+                className="px-4 py-3 text-lg text-slate-700 hover:text-brand-blue border-b border-slate-100 font-medium"
               >
                 Nosso Método
               </a>
               <a 
                 href="#escola-bilingue" 
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-3 text-lg text-slate-700 hover:text-brand-blue border-b border-slate-100"
+                className="px-4 py-3 text-lg text-slate-700 hover:text-brand-blue border-b border-slate-100 font-medium"
               >
-                Escola Bilíngue
+                Material Didático
               </a>
               <Button 
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  window.location.href = "#contato";
+                }}
                 className="mt-4 bg-brand-blue hover:bg-brand-navy text-white font-medium rounded-full py-6 shadow-blue"
               >
                 Quero mais informações <ChevronRight className="ml-1 h-4 w-4" />

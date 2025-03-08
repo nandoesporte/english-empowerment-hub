@@ -13,20 +13,22 @@ interface BenefitProps {
 
 const MaterialBenefit = ({ icon: Icon, title, description, features, delay = 0 }: BenefitProps) => {
   return (
-    <div className="the-place-card hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-fade-in-up rounded-xl" style={{ animationDelay: `${delay}ms` }}>
+    <div className="the-place-card hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-fade-in-up border border-slate-100 rounded-xl p-6" style={{ animationDelay: `${delay}ms` }}>
       <div className="flex items-center justify-center h-16 w-16 rounded-full bg-brand-light mb-6">
         <Icon className="h-8 w-8 text-brand-blue" />
       </div>
-      <h3 className="text-xl font-semibold mb-4 text-brand-navy">{title}</h3>
+      <h3 className="text-xl font-bold mb-4 text-brand-navy">{title}</h3>
       <p className="text-slate-600 mb-6">{description}</p>
-      {features.map((feature, index) => (
-        <div key={index} className="flex items-start gap-3 mb-3">
-          <div className="flex-shrink-0 mt-1">
-            <Check className="h-5 w-5 text-brand-blue" />
+      <div className="space-y-3">
+        {features.map((feature, index) => (
+          <div key={index} className="flex items-start gap-3">
+            <div className="flex-shrink-0 mt-1">
+              <Check className="h-5 w-5 text-brand-blue" />
+            </div>
+            <p className="text-slate-700 text-sm">{feature}</p>
           </div>
-          <p className="text-slate-700 text-sm">{feature}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
@@ -40,13 +42,13 @@ const BilingualSchool = () => {
       
       <div className="container px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block rounded-md bg-brand-yellow px-3 py-1 text-sm font-medium text-brand-navy mb-4">
+          <div className="inline-block rounded-full bg-brand-yellow px-4 py-1.5 text-sm font-semibold text-brand-navy mb-4 shadow-sm">
             Material Didático Exclusivo
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-            Material Didático Completo para Todas as Idades
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4 leading-tight">
+            Material Didático Completo para <span className="text-gradient-blue">Todas as Idades</span>
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Nosso material é desenvolvido especificamente para cada faixa etária, garantindo o aprendizado efetivo do inglês.
           </p>
         </div>

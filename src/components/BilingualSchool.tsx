@@ -13,9 +13,9 @@ interface BenefitProps {
 
 const MaterialBenefit = ({ icon: Icon, title, description, features, delay = 0 }: BenefitProps) => {
   return (
-    <div className="the-place-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: `${delay}ms` }}>
-      <div className="flex items-center justify-center h-14 w-14 rounded-full bg-brand-light mb-6">
-        <Icon className="h-7 w-7 text-brand-blue" />
+    <div className="the-place-card hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-fade-in-up rounded-xl" style={{ animationDelay: `${delay}ms` }}>
+      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-brand-light mb-6">
+        <Icon className="h-8 w-8 text-brand-blue" />
       </div>
       <h3 className="text-xl font-semibold mb-4 text-brand-navy">{title}</h3>
       <p className="text-slate-600 mb-6">{description}</p>

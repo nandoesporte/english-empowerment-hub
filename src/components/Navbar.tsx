@@ -35,18 +35,24 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            <a href="#beneficios" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300">
+            <a href="#beneficios" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300 relative group">
               Benefícios
+              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-brand-blue transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
             </a>
-            <a href="#metodo" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300">
+            <a href="#metodo" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300 relative group">
               Nosso Método
+              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-brand-blue transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
             </a>
-            <a href="#escola-bilingue" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300">
+            <a href="#escola-bilingue" className="px-4 py-2 text-slate-700 hover:text-brand-blue transition-colors duration-300 relative group">
               Escola Bilíngue
+              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-brand-blue transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
             </a>
-            <Button className="ml-4 bg-brand-blue hover:bg-brand-navy text-white font-medium rounded-full px-6">
+            <a 
+              href="#contato" 
+              className="ml-4 inline-flex items-center justify-center rounded-full bg-brand-blue py-2 px-6 text-sm font-medium text-white transition-colors hover:bg-brand-navy shadow-blue"
+            >
               Quero Saber Mais <ChevronRight className="ml-1 h-4 w-4" />
-            </Button>
+            </a>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -99,9 +105,9 @@ const Navbar = () => {
               </a>
               <Button 
                 onClick={() => setIsOpen(false)}
-                className="mt-4 bg-brand-blue hover:bg-brand-navy text-white font-medium rounded-full py-6"
+                className="mt-4 bg-brand-blue hover:bg-brand-navy text-white font-medium rounded-full py-6 shadow-blue"
               >
-                Quero Saber Mais <ChevronRight className="ml-1 h-4 w-4" />
+                Quero mais informações <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
             </div>
           </div>

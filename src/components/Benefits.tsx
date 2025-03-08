@@ -16,13 +16,13 @@ const BenefitCard = ({
 }) => {
   return (
     <div 
-      className="benefit-card" 
+      className="benefit-card group hover:border-brand-blue/30" 
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="mb-4 rounded-full bg-brand-light p-2.5 w-12 h-12 flex items-center justify-center">
-        <Icon className="h-6 w-6 text-brand-blue" />
+      <div className="mb-4 rounded-full bg-brand-light p-3 w-14 h-14 flex items-center justify-center group-hover:bg-brand-blue/10 transition-all duration-300">
+        <Icon className="h-7 w-7 text-brand-blue" />
       </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <h3 className="text-xl font-semibold mb-2 text-brand-navy group-hover:text-brand-blue transition-colors duration-300">{title}</h3>
       <p className="text-slate-600">{description}</p>
       <div className="absolute -bottom-1 -right-1 w-16 h-16 bg-brand-yellow/10 rounded-full"></div>
     </div>
@@ -31,7 +31,7 @@ const BenefitCard = ({
 
 const Benefits = () => {
   return (
-    <section id="beneficios" className="pt-8 pb-20 bg-gradient-to-b from-white to-slate-50">
+    <section id="beneficios" className="pt-6 pb-20 bg-gradient-to-b from-white to-slate-50">
       <div className="container px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block rounded-md bg-brand-light px-3 py-1 text-sm font-medium text-brand-blue mb-4">

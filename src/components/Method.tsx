@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, BookOpen, Users, GraduationCap, School, Globe, X } from 'lucide-react';
+import { Check, BookOpen, Users, GraduationCap, School, Globe, X, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 
@@ -24,7 +24,7 @@ const Method = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative order-2 lg:order-1">
             <div className="absolute -z-10 h-96 w-96 rounded-full bg-brand-light/70 blur-3xl left-1/4 top-1/4"></div>
-            <div className="relative glass-panel p-6 md:p-8 rounded-lg overflow-hidden shadow-xl animate-scale-in">
+            <div className="relative glass-panel p-6 md:p-8 rounded-xl overflow-hidden shadow-xl animate-scale-in border border-white/50">
               <div className="responsive-video-container w-full rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
                 <iframe 
                   src="https://www.youtube.com/embed/3rmkb7_IBlU" 
@@ -36,7 +36,7 @@ const Method = () => {
                 ></iframe>
               </div>
               {/* Methodology note repositioned for better mobile visibility */}
-              <div className="absolute bottom-8 right-8 md:right-8 glass-panel p-3 md:p-4 rounded-lg shadow-lg max-w-[200px] md:max-w-xs animate-fade-in-up hidden md:block">
+              <div className="absolute bottom-8 right-8 md:right-8 glass-panel p-3 md:p-4 rounded-lg shadow-lg max-w-[200px] md:max-w-xs animate-fade-in-up hidden md:block border border-white/50">
                 <div className="flex gap-2 md:gap-3 mb-1 md:mb-2">
                   <BookOpen className="h-5 w-5 md:h-6 md:w-6 text-brand-blue" />
                   <h4 className="font-semibold text-brand-navy text-sm md:text-base">Método Exclusivo</h4>
@@ -47,7 +47,7 @@ const Method = () => {
               </div>
               
               {/* Alternative methodology note for mobile devices */}
-              <div className="mt-4 glass-panel p-3 rounded-lg shadow-lg md:hidden">
+              <div className="mt-4 glass-panel p-3 rounded-lg shadow-lg md:hidden border border-white/50">
                 <div className="flex gap-2 mb-1">
                   <BookOpen className="h-5 w-5 text-brand-blue" />
                   <h4 className="font-semibold text-brand-navy text-sm">Método Exclusivo</h4>
@@ -68,7 +68,7 @@ const Method = () => {
               Por Que Escolher a The Place English School?
             </h2>
             
-            <div className="space-y-4">
+            <div className="space-y-4 mt-8">
               <FeatureCheck>
                 <span className="font-medium">Metodologia PPP:</span> Preço acessível, Perto de você, Processo natural de aprendizagem.
               </FeatureCheck>
@@ -92,7 +92,7 @@ const Method = () => {
             
             <a href="#contato" className={cn(
               "the-place-button",
-              "inline-flex mt-4 animate-scale-in"
+              "inline-flex mt-4 animate-scale-in shadow-blue"
             )}>
               Quero Saber Mais
             </a>

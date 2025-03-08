@@ -19,11 +19,11 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-brand-navy leading-tight">
-              Empreenda no Ensino de Inglês com um Método <span className="text-brand-blue">Comprovado!</span>
+              Transforme-se em um professor de inglês <span className="text-brand-blue">certificado pela Metodologia The Place!</span>
             </h1>
             
             <p className="text-lg md:text-xl text-slate-700 max-w-lg">
-              Seja um professor, diretor ou empreendedor, a The Place English School tem a solução ideal para você.
+              Abra sua escola de inglês com a metodologia The Place e tenha alunos fluentes em inglês. Com a melhor taxa de licença e sem Royalties.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

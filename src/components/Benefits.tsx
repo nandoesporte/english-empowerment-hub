@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, Users, BookOpen, GraduationCap, Globe } from 'lucide-react';
+import { Check, Users, BookOpen, GraduationCap, Globe, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const BenefitCard = ({ 
@@ -41,34 +41,46 @@ const Benefits = () => {
             Quem Pode se Beneficiar da Nossa Metodologia?
           </h2>
           <p className="text-lg text-slate-600">
-            Nosso método atende diferentes perfis que desejam se destacar no mercado de ensino de inglês.
+            Nossa licença é ideal para diferentes perfis que desejam empreender no mercado de ensino de inglês.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <BenefitCard
             icon={Users}
             title="Professores de Inglês"
-            description="Professores que buscam um método mais eficiente para garantir o aprendizado real dos alunos."
+            description="Professores que desejam abrir sua própria escola e utilizar uma metodologia comprovadamente eficaz."
             delay={100}
           />
           <BenefitCard
             icon={Globe}
             title="Pessoas Fluentes"
-            description="Pessoas fluentes em inglês que desejam iniciar uma nova carreira no ensino do idioma."
+            description="Pessoas fluentes em inglês que desejam iniciar uma carreira no ensino do idioma com seu próprio negócio."
             delay={200}
           />
           <BenefitCard
             icon={BookOpen}
             title="Escolas de Idiomas"
-            description="Escolas interessadas em oferecer um diferencial para atrair e reter mais alunos."
+            description="Escolas interessadas em adotar um método exclusivo para atrair e reter mais alunos com resultados comprovados."
             delay={300}
           />
           <BenefitCard
             icon={GraduationCap}
             title="Empreendedores"
-            description="Empreendedores que querem abrir um negócio lucrativo no setor de ensino de idiomas."
+            description="Empreendedores que querem abrir um negócio lucrativo e de sucesso no setor de ensino de idiomas."
             delay={400}
+          />
+          <BenefitCard
+            icon={School}
+            title="Escolas Regulares"
+            description="Diretores de escolas regulares que desejam implementar um programa bilíngue de qualidade."
+            delay={500}
+          />
+          <BenefitCard
+            icon={Award}
+            title="Buscando Independência Financeira"
+            description="Profissionais em busca de independência financeira e realização pessoal com seu próprio negócio."
+            delay={600}
           />
         </div>
       </div>

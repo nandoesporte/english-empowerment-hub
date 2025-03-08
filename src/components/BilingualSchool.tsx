@@ -1,7 +1,35 @@
 
 import React from 'react';
-import { Check, School, BookOpen, GraduationCap } from 'lucide-react';
+import { Check, School, BookOpen, GraduationCap, PenTool, Award, LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
+interface BenefitProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  features: string[];
+  delay?: number;
+}
+
+const MaterialBenefit = ({ icon: Icon, title, description, features, delay = 0 }: BenefitProps) => {
+  return (
+    <div className="the-place-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: `${delay}ms` }}>
+      <div className="flex items-center justify-center h-14 w-14 rounded-full bg-brand-light mb-6">
+        <Icon className="h-7 w-7 text-brand-blue" />
+      </div>
+      <h3 className="text-xl font-semibold mb-4 text-brand-navy">{title}</h3>
+      <p className="text-slate-600 mb-6">{description}</p>
+      {features.map((feature, index) => (
+        <div key={index} className="flex items-start gap-3 mb-3">
+          <div className="flex-shrink-0 mt-1">
+            <Check className="h-5 w-5 text-brand-blue" />
+          </div>
+          <p className="text-slate-700 text-sm">{feature}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const BilingualSchool = () => {
   return (
@@ -13,94 +41,75 @@ const BilingualSchool = () => {
       <div className="container px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block rounded-md bg-brand-yellow px-3 py-1 text-sm font-medium text-brand-navy mb-4">
-            Transformação Educacional
+            Material Didático Exclusivo
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-            Transforme Sua Escola Regular em uma Escola Bilíngue!
+            Material Didático Completo para Todas as Idades
           </h2>
           <p className="text-lg text-slate-600">
-            Sua escola pode se tornar referência no ensino bilíngue com exclusividade na sua região.
+            Nosso material é desenvolvido especificamente para cada faixa etária, garantindo o aprendizado efetivo do inglês.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="the-place-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-            <div className="flex items-center justify-center h-14 w-14 rounded-full bg-brand-light mb-6">
-              <School className="h-7 w-7 text-brand-blue" />
-            </div>
-            <h3 className="text-xl font-semibold mb-4 text-brand-navy">Metodologia Exclusiva</h3>
-            <p className="text-slate-600 mb-6">
-              Ensino do inglês integrado à grade curricular, com abordagem pedagógica moderna e eficaz.
-            </p>
-            <div className="flex items-start gap-3 mb-3">
-              <div className="flex-shrink-0 mt-1">
-                <Check className="h-5 w-5 text-brand-blue" />
-              </div>
-              <p className="text-slate-700 text-sm">
-                Resultados visíveis desde as primeiras aulas
-              </p>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 mt-1">
-                <Check className="h-5 w-5 text-brand-blue" />
-              </div>
-              <p className="text-slate-700 text-sm">
-                Método adaptado para diferentes idades
-              </p>
-            </div>
-          </div>
+          <MaterialBenefit
+            icon={School}
+            title="Série Kids"
+            description="Material didático para crianças entre 8 e 11 anos de idade, com conteúdo lúdico e adequado ao desenvolvimento."
+            features={[
+              "4 livros anuais com atividades interativas",
+              "Abordagem lúdica e adequada para crianças"
+            ]}
+            delay={100}
+          />
           
-          <div className="the-place-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-            <div className="flex items-center justify-center h-14 w-14 rounded-full bg-brand-light mb-6">
-              <BookOpen className="h-7 w-7 text-brand-blue" />
-            </div>
-            <h3 className="text-xl font-semibold mb-4 text-brand-navy">Material Didático Completo</h3>
-            <p className="text-slate-600 mb-6">
-              Conteúdo para alunos do ensino fundamental ao médio, desenvolvido por especialistas em educação bilíngue.
-            </p>
-            <div className="flex items-start gap-3 mb-3">
-              <div className="flex-shrink-0 mt-1">
-                <Check className="h-5 w-5 text-brand-blue" />
-              </div>
-              <p className="text-slate-700 text-sm">
-                Livros e materiais digitais interativos
-              </p>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 mt-1">
-                <Check className="h-5 w-5 text-brand-blue" />
-              </div>
-              <p className="text-slate-700 text-sm">
-                Conteúdo alinhado à BNCC e parâmetros internacionais
-              </p>
-            </div>
-          </div>
+          <MaterialBenefit
+            icon={BookOpen}
+            title="Série Teens"
+            description="Conteúdo especializado para jovens entre 12 e 17 anos, com temas relevantes e adaptados à realidade deles."
+            features={[
+              "7 livros semestrais com progressão adequada",
+              "Temas do universo adolescente para maior engajamento"
+            ]}
+            delay={200}
+          />
           
-          <div className="the-place-card hover:-translate-y-1 transition-transform duration-300 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-            <div className="flex items-center justify-center h-14 w-14 rounded-full bg-brand-light mb-6">
-              <GraduationCap className="h-7 w-7 text-brand-blue" />
-            </div>
-            <h3 className="text-xl font-semibold mb-4 text-brand-navy">Estratégias Pedagógicas</h3>
-            <p className="text-slate-600 mb-6">
-              Suporte e treinamento para tornar sua escola bilíngue de verdade, com acompanhamento contínuo.
-            </p>
-            <div className="flex items-start gap-3 mb-3">
-              <div className="flex-shrink-0 mt-1">
-                <Check className="h-5 w-5 text-brand-blue" />
-              </div>
-              <p className="text-slate-700 text-sm">
-                Capacitação continuada para professores
-              </p>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 mt-1">
-                <Check className="h-5 w-5 text-brand-blue" />
-              </div>
-              <p className="text-slate-700 text-sm">
-                Consultoria pedagógica especializada
-              </p>
-            </div>
-          </div>
+          <MaterialBenefit
+            icon={GraduationCap}
+            title="Série Adultos"
+            description="Material completo para alunos acima de 18 anos, com foco em situações práticas e comunicação efetiva."
+            features={[
+              "4 livros semestrais com foco em situações reais",
+              "Conteúdo direcionado para o mercado de trabalho"
+            ]}
+            delay={300}
+          />
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+          <MaterialBenefit
+            icon={Award}
+            title="Série Premium"
+            description="Material avançado para alunos já fluentes em inglês que desejam aprimorar ainda mais suas habilidades linguísticas."
+            features={[
+              "3 livros semestrais com conteúdo avançado",
+              "Foco em nuances da língua e expressões idiomáticas"
+            ]}
+            delay={400}
+          />
+          
+          <MaterialBenefit
+            icon={PenTool}
+            title="Vantagens do Material"
+            description="Nosso material didático exclusivo oferece vantagens únicas para escolas e professores."
+            features={[
+              "Sem necessidade de estoque inicial",
+              "Compra sob demanda conforme necessidade",
+              "Entrega direta pelo correio para sua escola",
+              "Acesso exclusivo para licenciados The Place"
+            ]}
+            delay={500}
+          />
         </div>
       </div>
     </section>

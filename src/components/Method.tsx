@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, BookOpen, Users, GraduationCap, School, Globe } from 'lucide-react';
+import { Check, BookOpen, Users, GraduationCap, School, Globe, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 
@@ -70,23 +70,23 @@ const Method = () => {
             
             <div className="space-y-4">
               <FeatureCheck>
-                <span className="font-medium">Ensino Eficiente:</span> Nossos alunos realmente aprendem a falar, entender, ler e escrever em inglês.
+                <span className="font-medium">Metodologia PPP:</span> Preço acessível, Perto de você, Processo natural de aprendizagem.
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-medium">Formação Completa:</span> Curso de capacitação para professores pela Editora The Place English School.
+                <span className="font-medium">Licença Exclusiva:</span> Opere com exclusividade em sua região, utilizando nossa marca e metodologia.
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-medium">Estratégias Inovadoras:</span> Retenção de alunos garantida por meio de métodos pedagógicos exclusivos.
+                <span className="font-medium">Material Didático Completo:</span> Séries Kids, Teens, Adultos e Premium para todas as idades e níveis.
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-medium">Suporte Total:</span> Acesso ao departamento pedagógico e ferramentas para acompanhar o progresso de cada aluno.
+                <span className="font-medium">Sem Royalties:</span> Apenas uma taxa única de licença de R$10.000,00, sem mensalidades ou porcentagens.
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-medium">Investimento Sob Demanda:</span> Material didático sob demanda, sem necessidade de estoque.
+                <span className="font-medium">Suporte Completo:</span> Treinamento para professores, suporte pedagógico e orientação para gestão da escola.
               </FeatureCheck>
             </div>
             

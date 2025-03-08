@@ -18,12 +18,12 @@ const CTA = () => {
           
           <div className="relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 animate-fade-in-up">
-              Pronto para transformar o ensino de inglês?
+              Transforme-se em um professor de inglês certificado pela Metodologia The Place!
             </h2>
             
             <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              Entre em contato hoje mesmo e descubra como a metodologia The Place English School 
-              pode impulsionar sua carreira ou transformar sua instituição de ensino.
+              Entre em contato hoje mesmo e descubra como a licença The Place English School 
+              pode ser o início da sua independência financeira com seu próprio negócio de sucesso.
             </p>
             
             <div className="max-w-md mx-auto animate-fade-in-up" style={{ animationDelay: '200ms' }}>

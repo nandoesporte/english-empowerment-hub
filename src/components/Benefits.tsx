@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, Users, BookOpen, GraduationCap, Globe, Award } from 'lucide-react';
+import { Check, Users, BookOpen, GraduationCap, Globe, Award, School } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const BenefitCard = ({ 

@@ -35,7 +35,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -133,11 +133,11 @@
   }
 
   .hero-button-primary {
-    @apply bg-brand-blue text-white hover:bg-brand-navy active:scale-[0.98] shadow-md;
+    @apply bg-flag-us-blue text-white hover:bg-flag-us-blue/90 active:scale-[0.98] shadow-md;
   }
 
   .hero-button-secondary {
-    @apply bg-white text-brand-navy hover:bg-slate-100 active:scale-[0.98] border border-slate-200;
+    @apply bg-white text-flag-us-blue hover:bg-slate-100 active:scale-[0.98] border border-slate-200;
   }
 
   .cta-card {
@@ -149,15 +149,15 @@
   }
   
   .modern-glass-card {
-    @apply backdrop-blur-md bg-gradient-to-b from-brand-blue to-brand-navy border border-white/10 rounded-2xl shadow-2xl;
+    @apply backdrop-blur-md bg-gradient-to-b from-flag-us-blue to-[#001d59] border border-white/10 rounded-2xl shadow-2xl;
   }
   
   .the-place-button {
-    @apply px-6 py-3.5 rounded-full font-semibold text-white bg-brand-blue hover:bg-brand-navy transition-colors duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:ring-offset-2;
+    @apply px-6 py-3.5 rounded-full font-semibold text-white bg-flag-us-blue hover:bg-[#001d4d] transition-colors duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-flag-us-blue/50 focus:ring-offset-2;
   }
   
   .the-place-accent-button {
-    @apply px-6 py-3.5 rounded-full font-semibold text-brand-navy bg-brand-yellow hover:bg-brand-yellow/90 transition-colors duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 focus:ring-offset-2;
+    @apply px-6 py-3.5 rounded-full font-semibold text-flag-us-blue bg-flag-us-red/90 hover:bg-flag-us-red transition-colors duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-flag-us-red/50 focus:ring-offset-2;
   }
   
   .the-place-card {
@@ -165,11 +165,28 @@
   }
   
   .shadow-blue {
-    @apply shadow-[0_4px_14px_0_rgba(0,59,132,0.2)];
+    @apply shadow-[0_4px_14px_0_rgba(0,40,104,0.2)];
   }
   
   .text-gradient-blue {
-    @apply bg-gradient-to-r from-brand-blue to-brand-teal text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-flag-us-blue to-[#0a4a9f] text-transparent bg-clip-text;
+  }
+
+  .flag-gradient-text {
+    @apply bg-gradient-to-r from-flag-us-red via-flag-white to-flag-us-blue text-transparent bg-clip-text;
+  }
+
+  .uk-gradient-text {
+    @apply bg-gradient-to-r from-flag-uk-red via-flag-white to-flag-uk-blue text-transparent bg-clip-text;
+  }
+
+  /* Flag inspired decorative element */
+  .flag-stripe {
+    @apply h-1 bg-gradient-to-r from-flag-us-red via-flag-white to-flag-us-blue;
+  }
+
+  .uk-flag-stripe {
+    @apply h-1 bg-gradient-to-r from-flag-uk-red via-flag-white to-flag-uk-blue;
   }
 }
 
@@ -233,9 +250,24 @@ input, select, textarea {
 }
 
 input:focus, select:focus, textarea:focus {
-  @apply ring-2 ring-brand-blue/30 outline-none;
+  @apply ring-2 ring-flag-us-blue/30 outline-none;
 }
 
 ::placeholder {
   @apply text-slate-400;
+}
+
+/* Flag accent for boxes */
+.flag-accent-box {
+  @apply relative overflow-hidden;
+}
+
+.flag-accent-box::before {
+  content: '';
+  @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-flag-us-red via-flag-white to-flag-us-blue;
+}
+
+/* Flag wave animation for decorative elements */
+.flag-wave {
+  @apply animate-flag-wave;
 }

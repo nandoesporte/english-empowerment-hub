@@ -70,7 +70,21 @@ export default {
 					light: '#E6F1F8',
 					yellow: '#FFD600',
 					red: '#C80000'
+				},
+				flag: {
+					'us-red': '#bf0a30',
+					'us-blue': '#002868',
+					'uk-red': '#cf142b',
+					'uk-blue': '#00247d',
+					white: '#ffffff'
 				}
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'hero-pattern': 'linear-gradient(to right, rgba(0, 59, 132, 0.9), rgba(0, 42, 95, 0.8))',
+				'feature-gradient': 'linear-gradient(135deg, #003B84 0%, #002A5F 100%)',
+				'flag-gradient': 'linear-gradient(45deg, #bf0a30 0%, #002868 100%)',
+				'uk-flag-gradient': 'linear-gradient(45deg, #cf142b 0%, #00247d 100%)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -137,6 +151,13 @@ export default {
 						opacity: '0.8',
 						transform: 'scale(1.05)'
 					}
+				},
+				'flag-wave': {
+					'0%': { transform: 'translateY(0) rotate(0deg)' },
+					'25%': { transform: 'translateY(-5px) rotate(2deg)' },
+					'50%': { transform: 'translateY(0) rotate(0deg)' },
+					'75%': { transform: 'translateY(-5px) rotate(-2deg)' },
+					'100%': { transform: 'translateY(0) rotate(0deg)' }
 				}
 			},
 			animation: {
@@ -147,12 +168,8 @@ export default {
 				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
 				'scale-in': 'scale-in 0.4s ease-out',
 				'slide-in': 'slide-in 0.5s ease-out',
-				'pulse-slow': 'pulse-slow 3s infinite'
-			},
-			backgroundImage: {
-				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'hero-pattern': 'linear-gradient(to right, rgba(0, 59, 132, 0.9), rgba(0, 42, 95, 0.8))',
-				'feature-gradient': 'linear-gradient(135deg, #003B84 0%, #002A5F 100%)'
+				'pulse-slow': 'pulse-slow 3s infinite',
+				'flag-wave': 'flag-wave 6s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Montserrat', 'sans-serif'],

@@ -16,36 +16,47 @@ const BenefitCard = ({
 }) => {
   return (
     <div 
-      className="benefit-card group hover:border-brand-blue/30 relative overflow-hidden" 
+      className="benefit-card group relative overflow-hidden border-2 border-transparent hover:border-[#1e3a8a]/20 rounded-xl"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="mb-5 rounded-full bg-brand-light p-4 w-16 h-16 flex items-center justify-center group-hover:bg-brand-blue/10 transition-all duration-300">
-        <Icon className="h-8 w-8 text-brand-blue" />
-      </div>
-      <h3 className="text-xl font-bold mb-3 text-brand-navy group-hover:text-brand-blue transition-colors duration-300">{title}</h3>
-      <p className="text-slate-600 text-base">{description}</p>
+      {/* Card top accent bar - American/British inspired */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#bf0a30] via-white to-[#002868]"></div>
       
-      {/* Card accent decoration */}
-      <div className="absolute top-3 right-3 w-20 h-20 bg-brand-yellow/5 rounded-full blur-xl"></div>
-      <div className="absolute -bottom-1 -right-1 w-16 h-16 bg-brand-yellow/10 rounded-full"></div>
+      <div className="p-7">
+        <div className="mb-5 rounded-full bg-[#f8f9fa] p-4 w-16 h-16 flex items-center justify-center group-hover:bg-[#e7f5ff] transition-all duration-300 border border-[#e2e8f0]">
+          <Icon className="h-8 w-8 text-[#1e3a8a]" />
+        </div>
+        <h3 className="text-xl font-bold mb-3 text-[#1a365d] group-hover:text-[#1e3a8a] transition-colors duration-300">{title}</h3>
+        <p className="text-slate-600 text-base">{description}</p>
+      </div>
+      
+      {/* Card accent decorations */}
+      <div className="absolute top-3 right-3 w-20 h-20 bg-[#bf0a30]/5 rounded-full blur-xl"></div>
+      <div className="absolute -bottom-1 -right-1 w-16 h-16 bg-[#002868]/10 rounded-full"></div>
+
+      {/* Flag-inspired corner */}
+      <div className="absolute bottom-0 right-0 w-12 h-12 overflow-hidden opacity-20">
+        <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-[#bf0a30] rotate-45"></div>
+      </div>
     </div>
   );
 };
 
 const Benefits = () => {
   return (
-    <section id="beneficios" className="pt-16 pb-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-0 right-0 -z-10 h-64 w-64 rounded-full bg-brand-light opacity-70 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 -z-10 h-64 w-64 rounded-full bg-brand-light opacity-70 blur-3xl"></div>
+    <section id="beneficios" className="pt-16 pb-24 bg-gradient-to-b from-white to-[#f8fafc] relative overflow-hidden">
+      {/* Flag-inspired background decorations */}
+      <div className="absolute top-0 right-0 -z-10 h-64 w-64 rounded-full bg-[#bf0a30]/5 opacity-70 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 -z-10 h-64 w-64 rounded-full bg-[#002868]/5 opacity-70 blur-3xl"></div>
+      <div className="absolute top-1/4 left-1/4 -z-10 h-32 w-32 rounded-full bg-white opacity-40 blur-2xl"></div>
       
       <div className="container px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block rounded-md bg-brand-yellow px-3 py-1 text-sm font-semibold text-brand-navy mb-4 shadow-sm">
-            Quem Pode se Beneficiar
+          <div className="inline-block rounded-md bg-gradient-to-r from-[#bf0a30] to-[#002868] px-3 py-1 text-sm font-semibold text-white mb-4 shadow-sm">
+            <span className="px-3 py-0.5 bg-white/10 backdrop-blur-sm rounded-sm">Quem Pode se Beneficiar</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4 leading-tight">
-            Quem Pode se Beneficiar da <span className="text-gradient-blue">Nossa Metodologia?</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-4 leading-tight">
+            Quem Pode se Beneficiar da <span className="bg-gradient-to-r from-[#1e3a8a] to-[#0284c7] text-transparent bg-clip-text">Nossa Metodologia?</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Nossa licença é ideal para diferentes perfis que desejam empreender no mercado de ensino de inglês.

@@ -19,22 +19,22 @@ const testimonialVideos: TestimonialVideo[] = [
   {
     id: "kyGb8EsKs-4",
     title: "Experiência transformadora",
-    person: "Professor certificado"
+    person: "Aluno The Place"
   },
   {
     id: "1x6sbj7DJGs",
     title: "Impacto do método",
-    person: "Parceiro The Place"
+    person: "Aluno The Place"
   },
   {
     id: "h_Wg8UeVNSM",
     title: "Crescimento com a metodologia",
-    person: "Empreendedor"
+    person: "Aluno The Place"
   },
   {
     id: "1mLZKgBlsLo",
     title: "Casos de sucesso",
-    person: "Aluno avançado"
+    person: "Aluno The Place"
   }
 ];
 

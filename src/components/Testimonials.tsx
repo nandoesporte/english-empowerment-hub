@@ -135,11 +135,11 @@ const Testimonials = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-navy">
-            Depoimentos de <span className="text-gradient-blue">alunos e parceiros</span>
+            Depoimentos de <span className="text-gradient-blue">alunos</span>
           </h2>
           
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Veja como nossa metodologia exclusiva tem transformado a vida de alunos e parceiros em todo o Brasil, criando histórias reais de sucesso no ensino de inglês.
+            Veja como nossa metodologia exclusiva tem transformado a vida de alunos em todo o Brasil, criando histórias reais de sucesso no ensino de inglês.
           </p>
         </div>
         

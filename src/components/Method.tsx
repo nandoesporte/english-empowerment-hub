@@ -75,7 +75,7 @@ const Method = () => {
             
             <div className="space-y-5 mt-8">
               <FeatureCheck>
-                <span className="font-semibold">Metodologia PPP:</span> Preço acessível, Perto de você, Processo natural de aprendizagem.
+                <span className="font-semibold">Sistema 3 P:</span> Preço acessível, Perto de você, Processo natural de aprendizagem.
               </FeatureCheck>
               
               <FeatureCheck>

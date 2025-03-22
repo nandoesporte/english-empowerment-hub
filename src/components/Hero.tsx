@@ -1,9 +1,49 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ChevronRight, CheckCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Hero = () => {
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Create YouTube player after component mounts
+    if (videoContainerRef.current) {
+      const tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+      
+      // @ts-ignore
+      window.onYouTubeIframeAPIReady = () => {
+        // @ts-ignore
+        new YT.Player('youtube-player', {
+          videoId: 'VqYifYVigOY',
+          playerVars: {
+            autoplay: 1,
+            loop: 1,
+            playlist: 'VqYifYVigOY', // needed for looping
+            controls: 0,
+            showinfo: 0,
+            rel: 0,
+            mute: 1, // muted for autoplay to work
+            playsinline: 1,
+          },
+          events: {
+            onReady: (event) => {
+              event.target.playVideo();
+            }
+          }
+        });
+      };
+    }
+    
+    return () => {
+      // @ts-ignore
+      window.onYouTubeIframeAPIReady = null;
+    };
+  }, []);
+
   return (
     <section className="relative pt-32 pb-24 overflow-hidden">
       {/* Background decorations */}
@@ -55,14 +95,25 @@ const Hero = () => {
           </div>
           
           <div className="relative rounded-2xl overflow-hidden animate-scale-in">
-            <div className="relative z-10 glass-panel p-6 md:p-10 mx-auto max-w-md lg:max-w-full shadow-2xl rounded-2xl border border-white/30">
-              <img 
-                src="/lovable-uploads/3d293fca-69e3-4c14-928a-011b41bb612b.png" 
-                alt="The Place English School - Metodologia com professora segurando livros" 
-                className="w-full h-auto rounded-lg shadow-lg object-cover lazy-image lazy-image-loaded"
-                style={{ aspectRatio: '1/1' }}
-                loading="lazy"
-              />
+            <div 
+              ref={videoContainerRef}
+              className="relative z-10 glass-panel p-6 md:p-10 mx-auto max-w-md lg:max-w-full shadow-2xl rounded-2xl border border-white/30"
+            >
+              {/* YouTube thumbnail overlay */}
+              <div className="relative aspect-square overflow-hidden rounded-lg shadow-lg">
+                {/* Thumbnail image that will be displayed before the video loads */}
+                <img 
+                  src="/lovable-uploads/2daefeb2-b0e8-43d8-b8ff-4c3781ef9386.png" 
+                  alt="The Place English School - Ganhe dinheiro ensinando inglês" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
+                
+                {/* YouTube iframe container */}
+                <div className="absolute inset-0">
+                  <div id="youtube-player" className="w-full h-full"></div>
+                </div>
+              </div>
+              
               <div className="absolute -bottom-6 -right-6 flex items-center justify-center rounded-full bg-white w-24 h-24 shadow-lg animate-bounce-subtle p-2">
                 <img 
                   src="https://theplacebrazil.com/wp-content/uploads/2016/12/LOGO-JPG-200px.jpg" 

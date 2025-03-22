@@ -79,7 +79,7 @@ const Method = () => {
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-semibold">Licença Exclusiva:</span> Opere com exclusividade em sua região, utilizando nossa marca e metodologia.
+                <span className="font-semibold">Licença Exclusiva:</span> Opere com exclusividade em sua região, utilizando a metodologia exclusiva The Place English School.
               </FeatureCheck>
               
               <FeatureCheck>

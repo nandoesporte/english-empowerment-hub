@@ -87,7 +87,7 @@ const Method = () => {
               </FeatureCheck>
               
               <FeatureCheck>
-                <span className="font-semibold">Sem Royalties:</span> Apenas uma taxa única de licença de R$10.000,00, sem mensalidades ou porcentagens.
+                <span className="font-semibold">Sem Royalties:</span> Apenas uma taxa única de licença de R$10.000,00, sem mensalidades ou royalties.
               </FeatureCheck>
               
               <FeatureCheck>

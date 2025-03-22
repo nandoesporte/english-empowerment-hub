@@ -1,7 +1,7 @@
-
 import React from 'react';
-import { Check, Users, BookOpen, GraduationCap, Globe, Award, School } from 'lucide-react';
+import { Check, Users, BookOpen, GraduationCap, Globe, Award, School, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button } from './ui/button';
 
 const BenefitCard = ({ 
   icon: Icon, 
@@ -27,7 +27,16 @@ const BenefitCard = ({
           <Icon className="h-8 w-8 text-[#1e3a8a]" />
         </div>
         <h3 className="text-xl font-bold mb-3 text-[#1a365d] group-hover:text-[#1e3a8a] transition-colors duration-300">{title}</h3>
-        <p className="text-slate-600 text-base">{description}</p>
+        <p className="text-slate-600 text-base mb-4">{description}</p>
+        
+        {/* New "Saiba Mais" button */}
+        <a 
+          href="#contato" 
+          className="inline-flex items-center gap-2 text-sm font-medium text-[#1e3a8a] hover:text-[#0284c7] transition-colors"
+        >
+          Saiba Mais
+          <ArrowRight className="h-4 w-4" />
+        </a>
       </div>
       
       {/* Card accent decorations */}

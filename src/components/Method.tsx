@@ -1,18 +1,26 @@
-
 import React from 'react';
-import { Check, BookOpen, Users, GraduationCap, School, Globe, X, Star } from 'lucide-react';
+import { Check, BookOpen, Users, GraduationCap, School, Globe, X, Star, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 
 const FeatureCheck = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="feature-check">
+    <div className="feature-check flex gap-3">
       <div className="flex-shrink-0 mt-1">
         <div className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-blue/10">
           <Check className="h-3.5 w-3.5 text-brand-blue" />
         </div>
       </div>
-      <p className="text-slate-700 text-base">{children}</p>
+      <div>
+        <p className="text-slate-700 text-base">{children}</p>
+        <a 
+          href="#contato" 
+          className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors"
+        >
+          Saiba Mais
+          <ArrowRight className="h-3.5 w-3.5" />
+        </a>
+      </div>
     </div>
   );
 };

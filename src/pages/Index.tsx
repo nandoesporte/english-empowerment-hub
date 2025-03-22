@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Benefits from '@/components/Benefits';
 import Method from '@/components/Method';
 import BilingualSchool from '@/components/BilingualSchool';
+import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -43,6 +44,7 @@ const Index = () => {
         <Hero />
         <Benefits />
         <Method />
+        <Testimonials />
         <BilingualSchool />
         <CTA />
       </main>

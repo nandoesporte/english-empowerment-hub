@@ -9,6 +9,7 @@ import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
+import { Toaster } from '@/components/ui/toaster';
 
 const Index = () => {
   // Initialize lazy loading for images
@@ -50,6 +51,7 @@ const Index = () => {
       </main>
       <Footer />
       <ScrollToTop />
+      <Toaster />
     </div>
   );
 };

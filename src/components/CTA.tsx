@@ -1,9 +1,57 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useToast } from '@/components/ui/use-toast';
 
 const CTA = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    profile: ''
+  });
+  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validate form
+    if (!formData.name || !formData.email || !formData.phone || !formData.profile) {
+      toast({
+        title: "Erro no formulário",
+        description: "Por favor, preencha todos os campos para continuar.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    // Format the message for WhatsApp
+    const whatsappNumber = "5544998425613"; // Phone number with country code (Brazil)
+    const message = encodeURIComponent(
+      `*Solicitação de Informações - The Place English School*\n\n` +
+      `*Nome:* ${formData.name}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Telefone:* ${formData.phone}\n` +
+      `*Perfil:* ${formData.profile}\n\n` +
+      `Olá! Gostaria de receber mais informações sobre como me tornar um professor certificado pela metodologia The Place English School.`
+    );
+    
+    // Create the WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="contato" className="py-20 relative overflow-hidden">
       {/* Background */}
@@ -27,35 +75,47 @@ const CTA = () => {
             </p>
             
             <div className="max-w-md mx-auto animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <input 
-                  type="text" 
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Nome completo" 
                   className="w-full px-4 py-3.5 rounded-xl bg-white/10 border border-white/30 text-white placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300"
                   required
                 />
                 <input 
-                  type="email" 
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Seu melhor e-mail" 
                   className="w-full px-4 py-3.5 rounded-xl bg-white/10 border border-white/30 text-white placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300"
                   required
                 />
                 <input 
-                  type="tel" 
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="Telefone com WhatsApp" 
                   className="w-full px-4 py-3.5 rounded-xl bg-white/10 border border-white/30 text-white placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300"
                   required
                 />
                 <select 
+                  name="profile"
+                  value={formData.profile}
+                  onChange={handleChange}
                   className="w-full px-4 py-3.5 rounded-xl bg-white/10 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300"
                   required
                 >
                   <option value="" className="bg-brand-navy">Selecione seu perfil</option>
-                  <option value="professor" className="bg-brand-navy">Professor de inglês</option>
-                  <option value="fluente" className="bg-brand-navy">Pessoa fluente em inglês</option>
-                  <option value="escola" className="bg-brand-navy">Diretor de escola de idiomas</option>
-                  <option value="empreendedor" className="bg-brand-navy">Empreendedor</option>
-                  <option value="escola-regular" className="bg-brand-navy">Diretor de escola regular</option>
+                  <option value="Professor de inglês" className="bg-brand-navy">Professor de inglês</option>
+                  <option value="Pessoa fluente em inglês" className="bg-brand-navy">Pessoa fluente em inglês</option>
+                  <option value="Diretor de escola de idiomas" className="bg-brand-navy">Diretor de escola de idiomas</option>
+                  <option value="Empreendedor" className="bg-brand-navy">Empreendedor</option>
+                  <option value="Diretor de escola regular" className="bg-brand-navy">Diretor de escola regular</option>
                 </select>
                 
                 <button 

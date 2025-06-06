@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { cn } from '@/lib/utils';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -14,31 +13,31 @@ const Footer = () => {
               The Place <span className="text-brand-blue">English School</span>
             </a>
             <p className="text-slate-600 max-w-xs">
-              Transformando o ensino de inglês com metodologia exclusiva e comprovada.
+              Transformando vidas através do ensino de inglês com metodologia exclusiva, certificada e comprovada.
             </p>
           </div>
           
           <div>
-            <h4 className="font-semibold text-brand-navy mb-4">Links Rápidos</h4>
+            <h4 className="font-semibold text-brand-navy mb-4">Certificação</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#beneficios" className="text-slate-600 hover:text-brand-blue transition-colors">
-                  Benefícios
+                  Benefícios da Licença
                 </a>
               </li>
               <li>
                 <a href="#metodo" className="text-slate-600 hover:text-brand-blue transition-colors">
-                  Nosso Método
+                  Nossa Metodologia
                 </a>
               </li>
               <li>
                 <a href="#escola-bilingue" className="text-slate-600 hover:text-brand-blue transition-colors">
-                  Escola Bilíngue
+                  Material Didático
                 </a>
               </li>
               <li>
-                <a href="#contato" className="text-slate-600 hover:text-brand-blue transition-colors">
-                  Contato
+                <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-slate-600 hover:text-brand-blue transition-colors">
+                  Seja um Professor
                 </a>
               </li>
             </ul>
@@ -49,12 +48,16 @@ const Footer = () => {
             <address className="not-italic text-slate-600 space-y-2">
               <p>contato@theplaceenglish.com.br</p>
               <p>(44) 99842-5613</p>
+              <p className="text-sm text-slate-500 mt-2">
+                Atendimento via WhatsApp
+              </p>
             </address>
           </div>
         </div>
         
         <div className="mt-12 pt-6 border-t border-slate-200 text-center text-slate-500 text-sm">
           <p>&copy; {year} The Place English School. Todos os direitos reservados.</p>
+          <p className="mt-1">Metodologia exclusiva para formação de professores de inglês certificados.</p>
         </div>
       </div>
     </footer>

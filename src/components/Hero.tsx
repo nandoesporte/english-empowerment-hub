@@ -1,10 +1,63 @@
 
-import React, { useEffect, useRef } from 'react';
-import { ChevronRight, CheckCircle } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ChevronRight, CheckCircle, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useToast } from '@/components/ui/use-toast';
 
 const Hero = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    profile: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validate form
+    if (!formData.name || !formData.email || !formData.phone || !formData.profile) {
+      toast({
+        title: "Erro no formulário",
+        description: "Por favor, preencha todos os campos para continuar.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    // Format the message for WhatsApp
+    const whatsappNumber = "5544998425613"; // Phone number with country code (Brazil)
+    const message = encodeURIComponent(
+      `*Solicitação de Informações - The Place English School*\n\n` +
+      `*Nome:* ${formData.name}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Telefone:* ${formData.phone}\n` +
+      `*Perfil:* ${formData.profile}\n\n` +
+      `Olá! Gostaria de receber mais informações sobre como me tornar um professor certificado pela metodologia The Place English School.`
+    );
+    
+    // Create the WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+    
+    // Show success message
+    toast({
+      title: "Mensagem enviada!",
+      description: "Você será redirecionado para o WhatsApp para finalizar o contato.",
+    });
+  };
 
   useEffect(() => {
     // Create YouTube player after component mounts
@@ -58,39 +111,95 @@ const Hero = () => {
               A melhor metodologia de ensino de inglês
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-brand-navy leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-brand-navy leading-tight hero-text">
               Transforme-se em um <span className="text-gradient-blue">professor de inglês certificado</span> pela Metodologia The Place!
             </h1>
             
-            <p className="text-lg md:text-xl text-slate-700 max-w-lg">
+            <p className="text-lg md:text-xl text-slate-700 max-w-lg body-text">
               Abra sua escola de inglês com a metodologia The Place e tenha alunos fluentes em inglês. Com a melhor taxa de licença e sem Royalties.
             </p>
             
             <div className="space-y-3 pt-2">
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                <p className="text-slate-700">Metodologia exclusiva e comprovada</p>
+                <p className="text-slate-700 body-text">Metodologia exclusiva e comprovada</p>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                <p className="text-slate-700">Material didático para todas as idades</p>
+                <p className="text-slate-700 body-text">Material didático para todas as idades</p>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                <p className="text-slate-700">Sem Royalties - apenas uma taxa única</p>
+                <p className="text-slate-700 body-text">Sem Royalties - apenas uma taxa única</p>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a href="#contato" className="the-place-button group flex items-center justify-center gap-2 shadow-blue rounded-full py-3.5 px-8">
-                Quero Saber Mais
-                <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+            {/* Formulário de contato integrado */}
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/30 mt-8">
+              <h3 className="text-xl font-bold text-brand-navy mb-4 card-title">
+                Receba mais informações agora!
+              </h3>
               
-              <a href="#metodo" className="hero-button hero-button-secondary group flex items-center justify-center gap-2 rounded-full py-3.5 px-8">
-                Conhecer o Método
-                <ChevronRight className="h-4 w-4 opacity-70 transition-transform group-hover:translate-x-1" />
-              </a>
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <input 
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Nome completo" 
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-brand-navy placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-blue/30 transition-all duration-300"
+                  required
+                />
+                <input 
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Seu melhor e-mail" 
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-brand-navy placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-blue/30 transition-all duration-300"
+                  required
+                />
+                <input 
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Telefone com WhatsApp" 
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-brand-navy placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-blue/30 transition-all duration-300"
+                  required
+                />
+                <select 
+                  name="profile"
+                  value={formData.profile}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-blue/30 transition-all duration-300"
+                  required
+                >
+                  <option value="">Selecione seu perfil</option>
+                  <option value="Professor de inglês">Professor de inglês</option>
+                  <option value="Pessoa fluente em inglês">Pessoa fluente em inglês</option>
+                  <option value="Diretor de escola de idiomas">Diretor de escola de idiomas</option>
+                  <option value="Empreendedor">Empreendedor</option>
+                  <option value="Diretor de escola regular">Diretor de escola regular</option>
+                </select>
+                
+                <button 
+                  type="submit" 
+                  className={cn(
+                    "w-full py-4 px-6 bg-brand-blue text-white font-bold rounded-xl",
+                    "flex items-center justify-center gap-2 transition-all duration-300",
+                    "hover:bg-brand-navy hover:shadow-lg active:scale-[0.98]",
+                    "text-lg shadow-lg"
+                  )}
+                >
+                  Quero mais informações
+                  <Send className="h-4 w-4" />
+                </button>
+              </form>
+              
+              <p className="text-slate-600 text-sm mt-4 text-center small-text">
+                Fique tranquilo! Seus dados estão protegidos e não serão compartilhados.
+              </p>
             </div>
           </div>
           

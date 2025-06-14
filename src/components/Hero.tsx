@@ -196,7 +196,7 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-brand-navy leading-tight hero-text">
-              Transforme-se em um <span className="text-gradient-blue">professor de inglês certificado</span> pela Metodologia The Place!
+              Abra sua escola de inglês com a <span className="text-gradient-blue">exclusiva metodologia The Place!</span>
             </h1>
             
             <p className="text-lg md:text-xl text-slate-700 max-w-lg body-text">

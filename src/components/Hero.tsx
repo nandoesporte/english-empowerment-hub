@@ -108,19 +108,19 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Formulário de contato em destaque - primeira coluna */}
           <div className="order-2 lg:order-1">
-            <div className="relative bg-gradient-to-br from-brand-yellow via-yellow-300 to-amber-400 rounded-3xl p-8 shadow-2xl border-4 border-yellow-400 animate-pulse-slow">
+            <div className="relative bg-gradient-to-br from-brand-blue via-blue-700 to-brand-navy rounded-3xl p-8 shadow-2xl border-4 border-brand-blue animate-pulse-slow">
               {/* Efeito de brilho */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full animate-bounce flex items-center justify-center">
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-brand-red rounded-full animate-bounce flex items-center justify-center">
                 <span className="text-white text-xs font-bold">!</span>
               </div>
               
               <div className="relative z-10">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-2 animate-bounce-subtle">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 animate-bounce-subtle">
                     🚀 OFERTA ESPECIAL!
                   </h3>
-                  <p className="text-brand-navy font-semibold text-lg">
+                  <p className="text-white font-semibold text-lg">
                     Receba informações GRATUITAS agora!
                   </p>
                 </div>
@@ -132,7 +132,7 @@ const Hero = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Nome completo" 
-                    className="w-full px-4 py-4 rounded-2xl bg-white border-2 border-brand-navy text-brand-navy placeholder:text-slate-500 focus:outline-none focus:ring-4 focus:ring-brand-blue/30 transition-all duration-300 text-lg font-medium shadow-lg"
+                    className="w-full px-4 py-4 rounded-2xl bg-white border-2 border-white text-brand-navy placeholder:text-slate-500 focus:outline-none focus:ring-4 focus:ring-brand-red/30 transition-all duration-300 text-lg font-medium shadow-lg"
                     required
                   />
                   <input 
@@ -141,7 +141,7 @@ const Hero = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Seu melhor e-mail" 
-                    className="w-full px-4 py-4 rounded-2xl bg-white border-2 border-brand-navy text-brand-navy placeholder:text-slate-500 focus:outline-none focus:ring-4 focus:ring-brand-blue/30 transition-all duration-300 text-lg font-medium shadow-lg"
+                    className="w-full px-4 py-4 rounded-2xl bg-white border-2 border-white text-brand-navy placeholder:text-slate-500 focus:outline-none focus:ring-4 focus:ring-brand-red/30 transition-all duration-300 text-lg font-medium shadow-lg"
                     required
                   />
                   <input 
@@ -150,14 +150,14 @@ const Hero = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Telefone com WhatsApp" 
-                    className="w-full px-4 py-4 rounded-2xl bg-white border-2 border-brand-navy text-brand-navy placeholder:text-slate-500 focus:outline-none focus:ring-4 focus:ring-brand-blue/30 transition-all duration-300 text-lg font-medium shadow-lg"
+                    className="w-full px-4 py-4 rounded-2xl bg-white border-2 border-white text-brand-navy placeholder:text-slate-500 focus:outline-none focus:ring-4 focus:ring-brand-red/30 transition-all duration-300 text-lg font-medium shadow-lg"
                     required
                   />
                   <select 
                     name="profile"
                     value={formData.profile}
                     onChange={handleChange}
-                    className="w-full px-4 py-4 rounded-2xl bg-white border-2 border-brand-navy text-brand-navy focus:outline-none focus:ring-4 focus:ring-brand-blue/30 transition-all duration-300 text-lg font-medium shadow-lg"
+                    className="w-full px-4 py-4 rounded-2xl bg-white border-2 border-white text-brand-navy focus:outline-none focus:ring-4 focus:ring-brand-red/30 transition-all duration-300 text-lg font-medium shadow-lg"
                     required
                   >
                     <option value="">Selecione seu perfil</option>
@@ -171,7 +171,7 @@ const Hero = () => {
                   <button 
                     type="submit" 
                     className={cn(
-                      "w-full py-5 px-6 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold rounded-2xl",
+                      "w-full py-5 px-6 bg-gradient-to-r from-brand-red to-red-700 text-white font-bold rounded-2xl",
                       "flex items-center justify-center gap-2 transition-all duration-300",
                       "hover:from-red-700 hover:to-red-800 hover:shadow-2xl active:scale-[0.98]",
                       "text-xl shadow-2xl border-2 border-red-800 animate-pulse"
@@ -182,7 +182,7 @@ const Hero = () => {
                   </button>
                 </form>
                 
-                <p className="text-brand-navy text-sm mt-4 text-center font-medium">
+                <p className="text-white text-sm mt-4 text-center font-medium">
                   🔒 Fique tranquilo! Seus dados estão protegidos e não serão compartilhados.
                 </p>
               </div>
@@ -191,7 +191,7 @@ const Hero = () => {
 
           {/* Conteúdo principal - segunda coluna */}
           <div className="space-y-6 animate-fade-in-up order-1 lg:order-2">
-            <div className="inline-block rounded-full bg-brand-yellow px-4 py-1.5 text-sm font-semibold text-brand-navy animate-slide-in shadow-sm">
+            <div className="inline-block rounded-full bg-brand-red px-4 py-1.5 text-sm font-semibold text-white animate-slide-in shadow-sm">
               A melhor metodologia de ensino de inglês
             </div>
             

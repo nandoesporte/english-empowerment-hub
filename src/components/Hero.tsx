@@ -174,7 +174,7 @@ const Hero = () => {
                       "w-full py-5 px-6 bg-gradient-to-r from-brand-red to-red-700 text-white font-bold rounded-2xl",
                       "flex items-center justify-center gap-2 transition-all duration-300",
                       "hover:from-red-700 hover:to-red-800 hover:shadow-2xl active:scale-[0.98]",
-                      "text-xl shadow-2xl border-2 border-red-800 animate-pulse"
+                      "text-xl shadow-2xl border-2 border-red-800"
                     )}
                   >
                     QUERO MAIS INFORMAÇÕES AGORA!

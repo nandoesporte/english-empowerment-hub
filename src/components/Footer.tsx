@@ -52,12 +52,12 @@ const Footer = () => {
                 <p>Jardim América</p>
               </div>
               <div className="space-y-1 pt-2">
-                <p>Telefone: (44) 3031-3304</p>
+                <p>Telefone: (44) 3228-5022</p>
                 <p>WhatsApp: (44) 99842-5613</p>
                 <p>contato@escolatheplace.com.br</p>
               </div>
               <div className="pt-2">
-                <p className="text-sm text-slate-500">CNPJ: 26.029.875/0001-00</p>
+                <p className="text-sm text-slate-500">CNPJ: 08.607.720/0001-21</p>
               </div>
             </address>
           </div>

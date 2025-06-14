@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronRight, CheckCircle, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -280,7 +279,7 @@ const Hero = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-slate-700 body-text"><span className="font-semibold">Licença Exclusiva:</span> Opere com exclusividade em sua região, utilizando a metodologia exclusiva The Place English School.</p>
+                    <p className="text-slate-700 body-text"><span className="font-semibold">Licença Exclusiva:</span> Licença exclusiva a partir de R$10.000,00! Descubra condições especiais e benefícios únicos. Vagas limitadas.</p>
                     <a href="#contato" className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors">
                       Saiba Mais
                       <ChevronRight className="h-3.5 w-3.5" />
@@ -300,7 +299,7 @@ const Hero = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-slate-700 body-text"><span className="font-semibold">Sem Royalties:</span> Apenas uma taxa única de licença de R$10.000,00, sem mensalidades ou royalties.</p>
+                    <p className="text-slate-700 body-text"><span className="font-semibold">Sem Royalties:</span> Sem mensalidades ou royalties. Tudo para você ter mais autonomia!</p>
                     <a href="#contato" className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors">
                       Saiba Mais
                       <ChevronRight className="h-3.5 w-3.5" />

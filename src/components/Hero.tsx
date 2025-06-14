@@ -279,7 +279,7 @@ const Hero = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-slate-700 body-text"><span className="font-semibold">Licença Exclusiva:</span> Licença exclusiva a partir de R$10.000,00! Descubra condições especiais e benefícios únicos. Vagas limitadas.</p>
+                    <p className="text-slate-700 body-text"><span className="font-semibold">Licença Exclusiva:</span> Licença exclusiva a partir de R$10.000! Descubra condições especiais e benefícios únicos. Vagas limitadas.</p>
                     <a href="#contato" className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors">
                       Saiba Mais
                       <ChevronRight className="h-3.5 w-3.5" />

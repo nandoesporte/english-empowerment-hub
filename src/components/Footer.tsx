@@ -64,8 +64,8 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-6 border-t border-slate-200 text-center text-slate-500 text-sm">
-          <p>&copy; {year} Escola de Idiomas The Place. Todos os direitos reservados.</p>
-          <p className="mt-1">Metodologia exclusiva para formação de professores de inglês certificados.</p>
+          <p>Metodologia exclusiva para formação de professores de inglês certificados. ©️ {year} Editora The Place Brazil. Todos os direitos reservados.</p>
+          <p className="mt-1">Metodologia exclusiva The Place English School.</p>
         </div>
       </div>
     </footer>

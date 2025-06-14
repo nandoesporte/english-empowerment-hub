@@ -61,8 +61,9 @@ const Hero = () => {
 
   useEffect(() => {
     // Create YouTube player after component mounts
-    if (videoContainerRef.current) {
+    if (videoContainerRef.current && !document.querySelector('#youtube-iframe-api')) {
       const tag = document.createElement('script');
+      tag.id = 'youtube-iframe-api';
       tag.src = "https://www.youtube.com/iframe_api";
       const firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
@@ -72,28 +73,48 @@ const Hero = () => {
         // @ts-ignore
         new YT.Player('youtube-player', {
           videoId: 'VqYifYVigOY',
+          width: '100%',
+          height: '100%',
           playerVars: {
             autoplay: 1,
             loop: 1,
-            playlist: 'VqYifYVigOY', // needed for looping
+            playlist: 'VqYifYVigOY',
             controls: 0,
             showinfo: 0,
             rel: 0,
-            mute: 1, // muted for autoplay to work
+            mute: 1,
             playsinline: 1,
+            modestbranding: 1,
+            iv_load_policy: 3
           },
           events: {
-            onReady: (event) => {
+            onReady: (event: any) => {
               event.target.playVideo();
+            },
+            onStateChange: (event: any) => {
+              // @ts-ignore
+              if (event.data === YT.PlayerState.ENDED) {
+                event.target.playVideo();
+              }
             }
           }
         });
       };
+      
+      // If API is already loaded, initialize immediately
+      // @ts-ignore
+      if (window.YT && window.YT.Player) {
+        // @ts-ignore
+        window.onYouTubeIframeAPIReady();
+      }
     }
     
     return () => {
-      // @ts-ignore
-      window.onYouTubeIframeAPIReady = null;
+      // Cleanup on unmount
+      const iframe = document.querySelector('#youtube-player');
+      if (iframe) {
+        iframe.remove();
+      }
     };
   }, []);
 
@@ -209,19 +230,20 @@ const Hero = () => {
                 ref={videoContainerRef}
                 className="relative z-10 glass-panel p-6 md:p-10 mx-auto max-w-md lg:max-w-full shadow-2xl rounded-2xl border border-white/30"
               >
-                {/* YouTube thumbnail overlay */}
-                <div className="relative aspect-square overflow-hidden rounded-lg shadow-lg">
-                  {/* Thumbnail image that will be displayed before the video loads */}
+                <div className="relative aspect-square overflow-hidden rounded-lg shadow-lg bg-black">
+                  <div 
+                    id="youtube-player" 
+                    className="absolute inset-0 w-full h-full"
+                    style={{ minHeight: '300px' }}
+                  ></div>
+                  
+                  {/* Fallback thumbnail in case video doesn't load */}
                   <img 
                     src="/lovable-uploads/2daefeb2-b0e8-43d8-b8ff-4c3781ef9386.png" 
                     alt="The Place English School - Ganhe dinheiro ensinando inglês" 
-                    className="w-full h-full object-cover rounded-lg"
+                    className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                    style={{ zIndex: -1 }}
                   />
-                  
-                  {/* YouTube iframe container */}
-                  <div className="absolute inset-0">
-                    <div id="youtube-player" className="w-full h-full"></div>
-                  </div>
                 </div>
                 
                 <div className="absolute -bottom-6 -right-6 flex items-center justify-center rounded-full bg-white w-24 h-24 shadow-lg animate-bounce-subtle p-2">

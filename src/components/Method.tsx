@@ -1,29 +1,6 @@
-import React from 'react';
-import { Check, BookOpen, Users, GraduationCap, School, Globe, X, Star, ArrowRight } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from './ui/button';
 
-const FeatureCheck = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div className="feature-check flex gap-3">
-      <div className="flex-shrink-0 mt-1">
-        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-blue/10">
-          <Check className="h-3.5 w-3.5 text-brand-blue" />
-        </div>
-      </div>
-      <div>
-        <p className="text-slate-700 text-base">{children}</p>
-        <a 
-          href="#contato" 
-          className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors"
-        >
-          Saiba Mais
-          <ArrowRight className="h-3.5 w-3.5" />
-        </a>
-      </div>
-    </div>
-  );
-};
+import React from 'react';
+import { cn } from '@/lib/utils';
 
 const Method = () => {
   return (
@@ -54,39 +31,10 @@ const Method = () => {
             <div className="inline-block rounded-full bg-brand-yellow px-4 py-1.5 text-sm font-semibold text-brand-navy shadow-sm">
               Por Que Escolher a The Place
             </div>
-            
             <h2 className="text-3xl md:text-4xl font-bold text-brand-navy leading-tight">
               Por Que Escolher a <span className="text-gradient-blue">The Place English School?</span>
             </h2>
-            
-            <div className="space-y-5 mt-8">
-              <FeatureCheck>
-                <span className="font-semibold">Sistema 3 P:</span> Preço acessível, Perto de você, Processo natural de aprendizagem.
-              </FeatureCheck>
-              
-              <FeatureCheck>
-                <span className="font-semibold">Licença Exclusiva:</span> Opere com exclusividade em sua região, utilizando a metodologia exclusiva The Place English School.
-              </FeatureCheck>
-              
-              <FeatureCheck>
-                <span className="font-semibold">Material Didático Completo:</span> Séries Kids, Teens, Adultos e Premium para todas as idades e níveis.
-              </FeatureCheck>
-              
-              <FeatureCheck>
-                <span className="font-semibold">Sem Royalties:</span> Apenas uma taxa única de licença de R$10.000,00, sem mensalidades ou royalties.
-              </FeatureCheck>
-              
-              <FeatureCheck>
-                <span className="font-semibold">Suporte Completo:</span> Treinamento para professores, suporte pedagógico e orientação para gestão da escola.
-              </FeatureCheck>
-            </div>
-            
-            <a href="#contato" className={cn(
-              "the-place-button",
-              "inline-flex mt-4 animate-scale-in shadow-blue rounded-full"
-            )}>
-              Quero Abrir Minha Escola
-            </a>
+            {/* Lista de benefícios removida conforme solicitado */}
           </div>
         </div>
       </div>

@@ -54,7 +54,7 @@ const Footer = () => {
               <div className="space-y-1 pt-2">
                 <p>Telefone: (44) 3228-5022</p>
                 <p>WhatsApp: (44) 99842-5613</p>
-                <p>contato@escolatheplace.com.br</p>
+                <p>comercial@theplacebrazil.com</p>
               </div>
               <div className="pt-2">
                 <p className="text-sm text-slate-500">CNPJ: 08.607.720/0001-21</p>

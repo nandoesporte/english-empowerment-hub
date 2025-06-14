@@ -203,21 +203,6 @@ const Hero = () => {
               Abra sua escola de inglês com a metodologia The Place e tenha alunos fluentes em inglês. Com a melhor taxa de licença e sem Royalties.
             </p>
             
-            <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                <p className="text-slate-700 body-text">Metodologia exclusiva e comprovada</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                <p className="text-slate-700 body-text">Material didático para todas as idades</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                <p className="text-slate-700 body-text">Sem Royalties - apenas uma taxa única</p>
-              </div>
-            </div>
-            
             {/* Vídeo */}
             <div className="relative rounded-2xl overflow-hidden animate-scale-in mt-8">
               <div 
@@ -247,6 +232,77 @@ const Hero = () => {
                   />
                 </div>
               </div>
+            </div>
+            
+            {/* Por Que Escolher a The Place - movido para depois do vídeo */}
+            <div className="space-y-3 pt-8">
+              <div className="inline-block rounded-full bg-brand-yellow px-4 py-1.5 text-sm font-semibold text-brand-navy shadow-sm">
+                Por Que Escolher a The Place
+              </div>
+              
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-navy leading-tight">
+                Por Que Escolher a <span className="text-gradient-blue">The Place English School?</span>
+              </h2>
+              
+              <div className="space-y-3 pt-2">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-slate-700 body-text"><span className="font-semibold">Sistema 3 P:</span> Preço acessível, Perto de você, Processo natural de aprendizagem.</p>
+                    <a href="#contato" className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors">
+                      Saiba Mais
+                      <ChevronRight className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-slate-700 body-text"><span className="font-semibold">Licença Exclusiva:</span> Opere com exclusividade em sua região, utilizando a metodologia exclusiva The Place English School.</p>
+                    <a href="#contato" className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors">
+                      Saiba Mais
+                      <ChevronRight className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-slate-700 body-text"><span className="font-semibold">Material Didático Completo:</span> Séries Kids, Teens, Adultos e Premium para todas as idades e níveis.</p>
+                    <a href="#contato" className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors">
+                      Saiba Mais
+                      <ChevronRight className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-slate-700 body-text"><span className="font-semibold">Sem Royalties:</span> Apenas uma taxa única de licença de R$10.000,00, sem mensalidades ou royalties.</p>
+                    <a href="#contato" className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors">
+                      Saiba Mais
+                      <ChevronRight className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-slate-700 body-text"><span className="font-semibold">Suporte Completo:</span> Treinamento para professores, suporte pedagógico e orientação para gestão da escola.</p>
+                    <a href="#contato" className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors">
+                      Saiba Mais
+                      <ChevronRight className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <a href="#contato" className={cn(
+                "the-place-button",
+                "inline-flex mt-4 animate-scale-in shadow-blue rounded-full"
+              )}>
+                Quero Abrir Minha Escola
+              </a>
             </div>
           </div>
         </div>

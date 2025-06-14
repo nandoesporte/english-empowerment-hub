@@ -110,7 +110,7 @@ const Hero = () => {
           <div className="order-2 lg:order-1">
             <div className="relative bg-gradient-to-br from-brand-blue via-blue-700 to-brand-navy rounded-3xl p-8 shadow-2xl border-4 border-brand-blue">
               {/* Efeito de brilho */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
               <div className="absolute -top-2 -right-2 w-6 h-6 bg-brand-red rounded-full animate-bounce flex items-center justify-center">
                 <span className="text-white text-xs font-bold">!</span>
               </div>
@@ -296,13 +296,6 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              
-              <a href="#contato" className={cn(
-                "the-place-button",
-                "inline-flex mt-4 animate-scale-in shadow-blue rounded-full"
-              )}>
-                Quero Abrir Minha Escola
-              </a>
             </div>
           </div>
         </div>

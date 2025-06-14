@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <a href="/" className="text-2xl font-bold text-brand-navy mb-4 inline-block">
-              The Place <span className="text-brand-blue">English School</span>
+              Escola de Idiomas <span className="text-brand-blue">The Place</span>
             </a>
             <p className="text-slate-600 max-w-xs">
               Transformando vidas através do ensino de inglês com metodologia exclusiva, certificada e comprovada.
@@ -46,17 +46,25 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-brand-navy mb-4">Contato</h4>
             <address className="not-italic text-slate-600 space-y-2">
-              <p>contato@theplaceenglish.com.br</p>
-              <p>(44) 99842-5613</p>
-              <p className="text-sm text-slate-500 mt-2">
-                Atendimento via WhatsApp
-              </p>
+              <div className="space-y-1">
+                <p>Av. dos Palmares, 650</p>
+                <p>Maringá, PR - CEP 87.045-290</p>
+                <p>Jardim América</p>
+              </div>
+              <div className="space-y-1 pt-2">
+                <p>Telefone: (44) 3228-5022</p>
+                <p>WhatsApp: (44) 99842-5613</p>
+                <p>contato@escolatheplace.com.br</p>
+              </div>
+              <div className="pt-2">
+                <p className="text-sm text-slate-500">CNPJ: 08.607.720/0001-21</p>
+              </div>
             </address>
           </div>
         </div>
         
         <div className="mt-12 pt-6 border-t border-slate-200 text-center text-slate-500 text-sm">
-          <p>&copy; {year} The Place English School. Todos os direitos reservados.</p>
+          <p>&copy; {year} Escola de Idiomas The Place. Todos os direitos reservados.</p>
           <p className="mt-1">Metodologia exclusiva para formação de professores de inglês certificados.</p>
         </div>
       </div>
